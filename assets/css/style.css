@@ -1,0 +1,25 @@
+body {
+    background-image: url('https://66.media.tumblr.com/5bb5ddbf7fa3374bd3e5958660fecd95/tumblr_ovn8p25MuV1uzwgsuo1_400.gif');
+    background-size: 100%;
+}
+.container-fluid {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    height: 100vh;
+    width: 100%;
+    border: 2px solid yellow;
+    
+    
+}
+
+#title {
+    background-color: white;
+    width: 10%;
+    display: inline-block;
+    margin-top: 10px; 
+    padding: 5px;
+    color: black;
+    border-radius: 30%;
+    border: 2px solid yellow;
+}
