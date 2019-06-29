@@ -1,11 +1,16 @@
 body {
     background-color: green;
+    background-image: url("https://66.media.tumblr.com/b8788ad627a3ddf5d7fec491ac0a5fee/tumblr_pq7foqyAIG1uzwgsuo1_400.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right top;
 }
-.container {
+
+.container-fluid {
     background-color: black;
     color: white;
     border-radius: 50%;
-    height: 410px;
-    width: 720px;
+    height: 100vh;
+    width: 100%;
    
 }
