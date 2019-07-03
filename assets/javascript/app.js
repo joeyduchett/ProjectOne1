@@ -10,6 +10,10 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
     console.log(response, "response");
+     let artist = response.results.trackmatches.track[0].artist;
+     let moreinfo = response.results.trackmatches.track[0].url;
+     $("#artist").text("Artist Name: " + artist);
+     $("#link").attr('href', moreinfo);
   });
 });
 const config = {
@@ -64,7 +68,7 @@ const config = {
     clickCounter = snapshot.val().clickCount;
 
     // Then we change the html associated with the number.
-    $("#click-value").text(snapshot.val().clickCount);
+    $("#click-value").text("Songs FU'd! " + snapshot.val().clickCount);
     
 
     // If there is an error that Firebase runs into -- it will be stored in the "errorObject"
@@ -74,4 +78,6 @@ const config = {
     // In case of error this will print the error
     console.log("The read failed: " + errorObject.code);
   });
+
+
 })
