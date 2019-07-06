@@ -15,6 +15,20 @@ $.ajax({
      $("#artist").text("Artist Name: " + artist);
      $("#link").attr('href', moreinfo);
   });
+  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
+  
+  $.ajax({
+    url: youtubeurl,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response, "youtubeapi");
+    let youtubevideo = response.items[0].id.videoId;
+    console.log(youtubevideo);
+    let videourl = 'https://www.youtube-nocookie.com/embed/' + youtubevideo;
+    console.log(videourl);
+    $('#videoplay').attr('src', videourl);
+  });
+
 });
 const config = {
     apiKey: "AIzaSyCM4JX2RT_DHRCdXGPZAK_AdbvR8AFnt7I",
