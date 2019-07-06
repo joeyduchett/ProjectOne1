@@ -11,12 +11,20 @@
 
 <body>
     <div class="container-fluid" id="circle">
-        <div class="row" >
-            <div class="col" style="text-align: center">
+        <div class="row">
+            <div id="songResults" class="col" style="text-align: center">
                 <h2>songfu!</h2>
                 <p>Search a Song</p>
-                <input id ="input-value" type="text" name="songname"></input>
+                <input id="input-value" type="text" name="songname"></input>
                 <button id="click-button" type="submit" value="Submit">Submit</button>
+                <div id ="scrollTable">
+                    <table align="center">
+                        <tr>
+                            <div id= scrollHeader></div><th id="artist">Artist</th></div>
+                            <div id= scrollHeader></div><th id="name">Song Title</th></div>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="row" style="text-align: center">

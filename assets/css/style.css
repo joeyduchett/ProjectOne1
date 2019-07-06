@@ -14,3 +14,28 @@ body {
     width: 100%;
    
 }
+
+table {
+    height: 10%;
+    width: 10%;
+    overflow-y: scroll;
+    text-align: center;
+    background-position: 50%;
+}
+
+td, tr, th { 
+    border: 1px solid green;
+    background: white;
+    color: black;
+    padding: 5px;
+}
+
+#scrollTable { 
+    margin-top: 20px; 
+    height: 200px; 
+    overflow: auto; 
+}
+#scrolltable th #scrollHeader { 
+    position: absolute; 
+    margin-top: -20px; 
+}
