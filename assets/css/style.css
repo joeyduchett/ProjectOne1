@@ -1,17 +1,46 @@
 body {
-    background-image: url('https://66.media.tumblr.com/5bb5ddbf7fa3374bd3e5958660fecd95/tumblr_ovn8p25MuV1uzwgsuo1_400.gif');
+
+    background-color: green;
+    background-image: url("https://66.media.tumblr.com/b8788ad627a3ddf5d7fec491ac0a5fee/tumblr_pq7foqyAIG1uzwgsuo1_400.gif");
+    background-repeat: no-repeat;
     background-size: 100%;
+    background-position: right top;
 }
+
 .container-fluid {
     background-color: black;
     color: white;
     border-radius: 50%;
     height: 100vh;
     width: 100%;
-    border: 2px solid yellow;
-    
-    
+
+   
 }
+
+table {
+    height: 10%;
+    width: 10%;
+    overflow-y: scroll;
+    text-align: center;
+    background-position: 50%;
+}
+
+td, tr, th { 
+    border: 1px solid green;
+    background: white;
+    color: black;
+    padding: 5px;
+}
+
+#scrollTable { 
+    margin-top: 20px; 
+    height: 200px; 
+    overflow: auto; 
+}
+#scrolltable th #scrollHeader { 
+    position: absolute; 
+    margin-top: -20px; 
+
 
 #title {
     background-color: white;
