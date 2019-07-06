@@ -11,7 +11,7 @@ $.ajax({
   }).then(function(response) {
     console.log(response, "response");
   });
-  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
+  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
   
   $.ajax({
     url: youtubeurl,
