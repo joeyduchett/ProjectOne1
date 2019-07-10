@@ -65,3 +65,12 @@ td, tr, th {
     top: -565px;
     left: 646px;
 } */
+/* #myDiv{
+    left: 40%;
+    top: 40%;
+    position: fixed;
+} */
+
+.whatever{
+    display: block !important;
+}

@@ -2,9 +2,14 @@
 //Need to write click function that stores value
 //from search bar and stores in varbiable
 $(document).ready(function() {
+  $(".myDiv").addClass('whatever');
   $("table").hide();
   
   $("#click-button").on("click", function() {
+    $(".myDiv").show();
+    $("#myDivbody").hide();
+    
+    
     event.preventDefault();
     $('table').empty();
     // console.log("working");
@@ -55,7 +60,14 @@ $(document).ready(function() {
     console.log(videourl);
     $('#videoplay').attr('src', videourl);
   });
-  
+
+  setTimeout(function assmuncher(){
+      $("#myDivbody").show();
+      $(".myDiv").hide();
+      
+    
+  }, 5000)
+  assmuncher();
 });
 const config = {
   apiKey: "AIzaSyCM4JX2RT_DHRCdXGPZAK_AdbvR8AFnt7I",
@@ -119,6 +131,9 @@ database.ref().on("value", function(snapshot) {
   // In case of error this will print the error
   console.log("The read failed: " + errorObject.code);
 });
+
+
+
 });
 
 
