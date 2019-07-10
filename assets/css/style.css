@@ -40,7 +40,7 @@ td, tr, th {
 #scrolltable th #scrollHeader { 
     position: absolute; 
     margin-top: -20px; 
-
+}
 
 #title {
     background-color: white;
@@ -52,3 +52,16 @@ td, tr, th {
     border-radius: 30%;
     border: 2px solid yellow;
 }
+#box1 {
+    position: relative;
+    top: -180px;
+}
+#box2 {
+    position: relative;
+    top: -180px;
+}
+/* #clicks {
+    position: relative;
+    top: -565px;
+    left: 646px;
+} */
