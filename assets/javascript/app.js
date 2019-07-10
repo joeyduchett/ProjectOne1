@@ -5,6 +5,7 @@ $(document).ready(function() {
   $("table").hide();
   
   $("#click-button").on("click", function() {
+    event.preventDefault();
     $('table').empty();
     // console.log("working");
     const track = $("#input-value").val().trim();
@@ -27,17 +28,16 @@ $(document).ready(function() {
       console.log(songResults);
   });
 
-});
-
-
-
+  
+  
+  
 $.ajax({
-    url: queryURL,
+  url: queryURL,
     method: "GET"
   }).then(function(response) {
     console.log(response, "response");
   });
-  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
+  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
   
   $.ajax({
     url: youtubeurl,
@@ -50,10 +50,10 @@ $.ajax({
     console.log(videourl);
     $('#videoplay').attr('src', videourl);
   });
-
+  
 });
 const config = {
-    apiKey: "AIzaSyCM4JX2RT_DHRCdXGPZAK_AdbvR8AFnt7I",
+  apiKey: "AIzaSyCM4JX2RT_DHRCdXGPZAK_AdbvR8AFnt7I",
     authDomain: "the-one-d42f5.firebaseapp.com",
     databaseURL: "https://the-one-d42f5.firebaseio.com",
     projectId: "the-one-d42f5",
@@ -66,53 +66,54 @@ const config = {
 
   // VARIABLES
   // --------------------------------------------------------------------------------
-
+  
   // Get a reference to the database service
   const database = firebase.database();
-
+  
   // Setting initial value of our click counter variable to 0
   let clickCounter = 0;
-
+  
   // FUNCTIONS + EVENTS
   // --------------------------------------------------------------------------------
-
+  
   // On Click of Button
   $("#click-button").on("click", function() {
     console.log("click");
     // Add to clickCounter
     clickCounter++;
-
+    
     //  Store Click Data to Firebase in a JSON property called clickCount
     // Note how we are using the Firebase .set() method
     database.ref().set({
       clickCount: clickCounter
     });
   });
-
+  
   // MAIN PROCESS + INITIAL CODE
   // --------------------------------------------------------------------------------
-
+  
   // Using .on("value", function(snapshot)) syntax will retrieve the data
   // from the database (both initially and every time something changes)
   // This will then store the data inside the variable "snapshot". We could rename "snapshot" to anything.
   database.ref().on("value", function(snapshot) {
-
+    
     // Then we console.log the value of snapshot
     console.log(snapshot.val());
-
+    
     // Update the clickCounter variable with data from the database.
     clickCounter = snapshot.val().clickCount;
-
+    
     // Then we change the html associated with the number.
     $("#click-value").text(snapshot.val().clickCount);
     
-
+    
     // If there is an error that Firebase runs into -- it will be stored in the "errorObject"
     // Again we could have named errorObject anything we wanted.
   }, function(errorObject) {
-
+    
     // In case of error this will print the error
     console.log("The read failed: " + errorObject.code);
   });
-})
+});
+  
 
