@@ -12,14 +12,17 @@
 
 <body>
     <div class="container-fluid" id="circle">
-
+        
         <div class="row">
             <div id="songResults" class="col" style="text-align: center">
-                <h2 id="title">Songfu!</h2>
-                <p>Search a Song</p>
-                <input id="input-value" type="text" name="songname"></input>
-                <button id="click-button" type="submit" value="Submit">Submit</button>
-                <div id ="scrollTable">
+                    <h2 id="title">Songfu!</h2>
+                    <p>Search a Song</p>
+                    <div>
+                        <input id="input-value" type="text" name="songname"></input>
+                        <button id="click-button" type="submit" value="Submit">Submit</button>
+                        <div class="col" id="clicks"></div>
+                        <div id ="scrollTable">
+                    </div>
                     <table align="center">
                         <tr>
                             <div id= scrollHeader></div><th id="artist">Artist</th></div>
@@ -48,7 +51,6 @@
                 <iframe id='videoplay' width="500" height="295" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" gesture="media" allowfullscreen></iframe>
             </div>
             <div class="row">
-                <div class="col" id="clicks"></div>
             </div>
         </div>
     </div>

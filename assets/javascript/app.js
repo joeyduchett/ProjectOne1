@@ -5,6 +5,7 @@ $(document).ready(function() {
   $("table").hide();
   
   $("#click-button").on("click", function() {
+    event.preventDefault();
     $('table').empty();
     // console.log("working");
     const track = $("#input-value").val().trim();
@@ -41,7 +42,7 @@ $(document).ready(function() {
     $("#artist").text("Artist Name: " + artist);
     $("#link").attr('href', moreinfo);
   });
-  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
+  let youtubeurl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&videoCategoryId=10&videoEmbeddable=true&q=" + track + "&type=video&videoCaption=closedCaption&key=AIzaSyBlbetWcuNrWDZnzRi44TuLhTyhxb7zgTs"
   
   $.ajax({
     url: youtubeurl,
