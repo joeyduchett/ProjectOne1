@@ -15,7 +15,7 @@
 
         <div class="row">
             <div id="songResults" class="col" style="text-align: center">
-                <h2>Songfu!</h2>
+                <h2 id="title">Songfu!</h2>
                 <p>Search a Song</p>
                 <input id="input-value" type="text" name="songname"></input>
                 <button id="click-button" type="submit" value="Submit">Submit</button>
@@ -33,15 +33,19 @@
             </div>
         </div>
         <div class="row" style="text-align: center">
-            <div class="col-sm-6">
-                <h3>box title</h3>
-                <div>box info</div>
+            <div class="col-sm-6" id="box1">
+                <h3>Extra Shit</h3>
+                <div></div>
+                <p id="artist"></p>
+                <p id="more-info">
+                    <a href="" id="link">Click Here for more info!</a>
+                </p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="box2">
                 
-                <iframe id='videoplay' width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" gesture="media" allowfullscreen></iframe>
-                <h3>box title</h3>
-                <div>box info</div>
+                <h3>Video</h3>
+                <div></div>
+                <iframe id='videoplay' width="500" height="295" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" gesture="media" allowfullscreen></iframe>
             </div>
             <div class="row">
                 <div class="col" id="clicks"></div>
