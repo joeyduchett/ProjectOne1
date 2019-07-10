@@ -21,6 +21,7 @@ $(document).ready(function() {
         songResults.push(response.results.trackmatches.track[i]);
         $("table").show();
         
+        
         $('table').append('<tr><td>' + response.results.trackmatches.track[i].artist + '</td><td>' + response.results.trackmatches.track[i].name + '</td></tr>');
         // $('#songInfo').append('<td>' + response.results.trackmatches.track[i].name + '</td>');
       }
