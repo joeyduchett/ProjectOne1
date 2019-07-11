@@ -2,12 +2,12 @@
 //Need to write click function that stores value
 //from search bar and stores in varbiable
 $(document).ready(function() {
-  $(".myDiv").addClass('whatever');
-  $("table").hide();
+  // $(".myDiv").addClass('whatever');
+  // $("table").hide();
   
   $("#click-button").on("click", function() {
-    $(".myDiv").show();
-    $("#myDivbody").hide();
+    // $(".myDiv").show();
+    // $("#myDivbody").hide();
     
     
     event.preventDefault();
@@ -61,13 +61,13 @@ $(document).ready(function() {
     $('#videoplay').attr('src', videourl);
   });
 
-  setTimeout(function assmuncher(){
-      $("#myDivbody").show();
-      $(".myDiv").hide();
+  // setTimeout(function assmuncher(){
+  //     $("#myDivbody").show();
+  //     $(".myDiv").hide();
       
     
-  }, 5000)
-  assmuncher();
+  // }, 5000)
+  // assmuncher();
 });
 const config = {
   apiKey: "AIzaSyCM4JX2RT_DHRCdXGPZAK_AdbvR8AFnt7I",
