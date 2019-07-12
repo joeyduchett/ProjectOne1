@@ -51,6 +51,9 @@ td, tr, th {
     color: black;
     border-radius: 30%;
     border: 2px solid yellow;
+    background: -webkit-linear-gradient(cyan, rgb(255, 124, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #box1 {
     position: relative;
@@ -65,3 +68,12 @@ td, tr, th {
     top: -565px;
     left: 646px;
 } */
+/* #myDiv{
+    left: 40%;
+    top: 40%;
+    position: fixed;
+} */
+
+.whatever{
+    display: block !important;
+}
