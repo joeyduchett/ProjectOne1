@@ -11,6 +11,13 @@ $(document).ready(function() {
     
     
     event.preventDefault();
+    // let randoN = Math.floor(Math.random()*5);
+    // let loadgif = gifs[randoN];
+    // $('#load').attr('src', loadgif);
+
+    // console.log(loadgif);
+
+
     $('table').empty();
     // console.log("working");
     const track = $("#input-value").val().trim();
@@ -131,7 +138,6 @@ database.ref().on("value", function(snapshot) {
   // In case of error this will print the error
   console.log("The read failed: " + errorObject.code);
 });
-
 
 
 });
